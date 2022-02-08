@@ -14,6 +14,7 @@ public class Driver {
 		Room first = new Room(5,5,Color.black);
 		Room second = new Room(8,3,Color.red);
 		Room third = new Room(10,10,Color.blue);
+		ojhi
 	}
 
 }
