@@ -7,7 +7,10 @@ import java.awt.Color;
 public class Room { 
 	
 	public Room(int dx, int dy, Color color) {
-		
+		dx = 5;
+		dy = 5;
+		color = Color.black;
+		System.out.print(dx,dy,color.toString());
 	}
 
 	public void connectNorthTo(Room r) {
