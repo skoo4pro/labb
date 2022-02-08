@@ -17,6 +17,9 @@ public class LevelGUI implements Observer {
 
 	private Level lv;
 	private Display d;
+	private Display lvl;
+	
+	
 	
 	public LevelGUI(Level level, String name) {
 		
@@ -27,7 +30,8 @@ public class LevelGUI implements Observer {
 		
 		// TODO: You should change 200 to a value 
 		// depending on the size of the level
-		d = new Display(lv,200,200);
+		d = new Display(lv,400,400);
+		
 		
 		frame.getContentPane().add(d);
 		frame.pack();
@@ -58,6 +62,13 @@ public class LevelGUI implements Observer {
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			
+			Level lel = new Level();
+			int cordx = lel.xcord;
+			int cordy = lel.ycord;
+			
+			
+			
+			
 		}
 		
 
@@ -72,6 +83,14 @@ public class LevelGUI implements Observer {
 
 	 		public void keyTyped(KeyEvent event) {
 	 		}
+	 	}
+	 	
+	 	public int getx() {
+			return cordx;
+		}
+	 	
+	 	public void setx(int newx) {
+	 		this.cordx = newx;
 	 	}
 
 	}
