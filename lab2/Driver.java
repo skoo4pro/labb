@@ -7,7 +7,7 @@ import lab2.level.Room;
 public class Driver {
 
 	public void run() {
-		
+		System.out.print("Hejsan");
 	}
 
 }
