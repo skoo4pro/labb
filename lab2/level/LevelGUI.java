@@ -1,5 +1,7 @@
 
 package lab2.level;
+import lab2.Driver;
+import lab2.level.Room;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -23,15 +25,19 @@ public class LevelGUI implements Observer {
 	
 	public LevelGUI(Level level, String name) {
 		
+		
+		
 		this.lv = level;
+		
 		
 		JFrame frame = new JFrame(name);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// TODO: You should change 200 to a value 
 		// depending on the size of the level
-		d = new Display(lv,400,400);
+		d = new Display(lv,800,600);
 		
+		Driver dirve = new Driver();
 		
 		frame.getContentPane().add(d);
 		frame.pack();
@@ -52,23 +58,28 @@ public class LevelGUI implements Observer {
 			
 			addKeyListener(new Listener());
 			
-			setBackground(Color.GREEN);
+			setBackground(Color.white);
 			setPreferredSize(new Dimension(x+20,y+20));
 			setFocusable(true);
 		}
 	
 		
 		
+		private void sizeLoc(Graphics g) {
+			
+			for(Room room : lv.rooms) {
+				g.setColor(room.color);
+				g.fillRect(room.x, room.y, room.dx, room.dy);
+			}
+			
+			
+			
+			 
+		}
+		
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
-			
-			Level lel = new Level();
-			int cordx = lel.xcord;
-			int cordy = lel.ycord;
-			
-			
-			
-			
+			sizeLoc(g);
 		}
 		
 
@@ -83,14 +94,6 @@ public class LevelGUI implements Observer {
 
 	 		public void keyTyped(KeyEvent event) {
 	 		}
-	 	}
-	 	
-	 	public int getx() {
-			return cordx;
-		}
-	 	
-	 	public void setx(int newx) {
-	 		this.cordx = newx;
 	 	}
 
 	}
