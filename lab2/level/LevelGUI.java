@@ -67,22 +67,23 @@ public class LevelGUI implements Observer {
 		
 		
 		private void sizeLoc(Graphics g) {
-			
-			for(Room room : Level.rooms) {
-				if(Level.place(room,room.x,room.y) = ) {
+			for(Room room : Level.rooms) {	
+				if(Level.check = true ) {
 					g.setColor(room.color);
 					g.fillRect(room.x, room.y, room.dx, room.dy);
+					
+				}				
+			}
+					
+		} 
+		
+		private void Corridors(Graphics g) {
+			for(Room room : lv.rooms) {
+				if(room.northdoor != null) {
 					
 				}
 				
 				
-			} 
-		}
-		
-		private void Corridors(Graphics g) {
-			for(Room room : lv.rooms) {
-				
-				g.fillRect(room.dx, room.dy, 20, 20);
 			}
 		}
 		
