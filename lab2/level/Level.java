@@ -10,18 +10,19 @@ import lab2.Driver;
 
 public class Level extends Observable {
 	
-	public ArrayList<Room> rooms = new ArrayList<Room>();
+	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	
 	int xcord;
 	int ycord;
     
 	
-	public boolean place(Room r,int x,int y)  {
-		
+	public static boolean place(Room r,int x,int y)  {
+		boolean check = false;
 		for(Room room : rooms) {
 			if(room.x + room.dx >= x && room.x <= x + r.dx 
-				&& room.y + room.dy >= y && room.y <= y + r.dy) {
-				return false;
+			&& room.y + room.dy >= y && room.y <= y + r.dy) {
+				
+				return check;
 			}
 		}
 		
@@ -31,7 +32,7 @@ public class Level extends Observable {
 		Room first = r;
 		rooms.add(first);
 		
-		return true;
+		return check;
 	}
 	
 	public void firstLocation(Room r) {

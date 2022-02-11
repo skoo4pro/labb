@@ -2,6 +2,7 @@
 package lab2.level;
 import lab2.Driver;
 import lab2.level.Room;
+import lab2.level.Level;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -67,19 +68,28 @@ public class LevelGUI implements Observer {
 		
 		private void sizeLoc(Graphics g) {
 			
+			for(Room room : Level.rooms) {
+				if(Level.place(room,room.x,room.y) = ) {
+					g.setColor(room.color);
+					g.fillRect(room.x, room.y, room.dx, room.dy);
+					
+				}
+				
+				
+			} 
+		}
+		
+		private void Corridors(Graphics g) {
 			for(Room room : lv.rooms) {
-				g.setColor(room.color);
-				g.fillRect(room.x, room.y, room.dx, room.dy);
+				
+				g.fillRect(room.dx, room.dy, 20, 20);
 			}
-			
-			
-			
-			 
 		}
 		
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			sizeLoc(g);
+			Corridors(g);
 		}
 		
 
