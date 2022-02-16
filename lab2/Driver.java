@@ -22,7 +22,7 @@ public class Driver {
 		Room sixth = new Room(120,80,Color.YELLOW);
 		Room seventh = new Room(140,160,Color.MAGENTA);
 		Room eighth = new Room(180,80,Color.CYAN);
-		hdd
+		
 		Level.place(first, 60, 180);
 		Level.place(second, 200, 100);
 		Level.place(third, 200, 340);
@@ -42,9 +42,22 @@ public class Driver {
 		
 
 		first.connectEastTo(second);
+		first.connectEastTo(third);
 		second.connectWestTo(first);
-		third.connectNorthTo(first);
-		first.connectSouthTo(third);
+		second.connectSouthTo(third);
+		third.connectNorthTo(second);
+		third.connectWestTo(first);
+		second.connectEastTo(forth);
+		forth.connectWestTo(second);
+		forth.connectSouthTo(sixth);
+		sixth.connectNorthTo(forth);
+		forth.connectEastTo(fifth);
+		fifth.connectWestTo(forth);
+		fifth.connectSouthTo(seventh);
+		seventh.connectNorthTo(fifth);
+		seventh.connectSouthTo(eighth);
+		eighth.connectNorthTo(seventh);
+		
 	}
 
 }
