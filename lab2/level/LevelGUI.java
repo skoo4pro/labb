@@ -112,6 +112,10 @@ public class LevelGUI implements Observer {
 			g.fillRect(xcord-2, ycord-2 ,85, 205 );
 		}
 		
+		public void currentlocation(Graphics g) {
+			for(Room room: lv.rooms);
+		}
+		
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			firstroom(g);
