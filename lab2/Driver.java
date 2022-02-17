@@ -14,15 +14,15 @@ public class Driver {
 		System.out.println("This is a print-out from the driver");
 		
 		
-		Room first = new Room(80,200,Color.red);
-		Room second = new Room(180,180,Color.ORANGE);
-		Room third = new Room(200,80,Color.blue);
-		Room forth = new Room(80,100,Color.GREEN);
-		Room fifth = new Room(60,80,Color.PINK);
-		Room sixth = new Room(120,80,Color.YELLOW);
-		Room seventh = new Room(140,160,Color.MAGENTA);
-		Room eighth = new Room(180,80,Color.CYAN);
-		hdd
+		Room first = new Room(80,200,new Color(30,160,200));
+		Room second = new Room(180,180,new Color(50,250,100));
+		Room third = new Room(200,80,new Color(89,9,65));
+		Room forth = new Room(80,100,new Color(240,90,180));
+		Room fifth = new Room(60,80,new Color(220,20,60));
+		Room sixth = new Room(120,80, new Color(0,128,128));
+		Room seventh = new Room(140,160, new Color(100,20,250));
+		Room eighth = new Room(180,80, new Color(200,1,140));
+	
 		Level.place(first, 60, 180);
 		Level.place(second, 200, 100);
 		Level.place(third, 200, 340);

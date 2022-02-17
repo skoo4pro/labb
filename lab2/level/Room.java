@@ -26,7 +26,6 @@ public class Room {
 
 	public void connectNorthTo(Room r) {
 		this.northdoor = r;
-		
 	}
 	public void connectEastTo(Room r) {
 		this.eastdoor = r;

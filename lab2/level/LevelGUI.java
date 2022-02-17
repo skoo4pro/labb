@@ -51,6 +51,8 @@ public class LevelGUI implements Observer {
 		
 	}
 	
+	
+	
 	private class Display extends JPanel {
 		
 		
@@ -93,20 +95,40 @@ public class LevelGUI implements Observer {
 			Corridors(g);
 		}
 		
-
+		
 	 	private class Listener implements KeyListener {
 
 	 		
 	 		public void keyPressed(KeyEvent arg0) {
+	 		
+	 			
 	 		}
 
 	 		public void keyReleased(KeyEvent arg0) {
 	 		}
 
 	 		public void keyTyped(KeyEvent event) {
+	 			switch(event.getKeyChar()) {
+	 			case 'w':
+	 				System.out.println("You pressed the 'w' key");
+	 				break;
+	 			case 'a':
+	 				System.out.println("You pressed the 'a' key");
+	 				break;
+	 			case 's':
+	 				System.out.println("You pressed the 's' key");
+	 				break;
+	 			case 'd':
+	 				System.out.println("You pressed the 'd' key");
+	 				break; 			
+	 			}
+	 			
 	 		}
 	 	}
 
 	}
 	
 }
+//om det finns en dörr, go w/n/..
+//if lv.location.doorE != null
+//lv.goNorth

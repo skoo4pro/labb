@@ -12,8 +12,8 @@ public class Level extends Observable {
 	
 	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	static boolean check = true;
-	int xcord;
-	int ycord;
+	static int xcord;
+	static int ycord;
     
 	
 	public static boolean place(Room r,int x,int y)  {
@@ -28,16 +28,20 @@ public class Level extends Observable {
 		
 		r.x = x;
 		r.y = y;
-		rooms.add(r);
+		
 		Room first = r;
 		rooms.add(first);
 		
 		return check;
 	}
 	
-	public void firstLocation(Room r) {
+	public static void firstLocation(Room r) {
 			xcord = rooms.get(0).dx/2;
 			ycord = rooms.get(0).dy/2;
+			
 	}
 	
 }
+//location=location.doorE
+//setChanged()
+//notifyobservers()
