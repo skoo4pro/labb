@@ -14,6 +14,7 @@ public class Driver {
 		System.out.println("This is a print-out from the driver");
 		
 		
+
 		Room first = new Room(80,200,new Color(30,160,200));
 		Room second = new Room(180,180,new Color(50,250,100));
 		Room third = new Room(200,80,new Color(89,9,65));
@@ -23,6 +24,9 @@ public class Driver {
 		Room seventh = new Room(140,160, new Color(100,20,250));
 		Room eighth = new Room(180,80, new Color(200,1,140));
 	
+
+		
+
 		Level.place(first, 60, 180);
 		Level.place(second, 200, 100);
 		Level.place(third, 200, 340);
@@ -42,9 +46,22 @@ public class Driver {
 		
 
 		first.connectEastTo(second);
+		first.connectEastTo(third);
 		second.connectWestTo(first);
-		third.connectNorthTo(first);
-		first.connectSouthTo(third);
+		second.connectSouthTo(third);
+		third.connectNorthTo(second);
+		third.connectWestTo(first);
+		second.connectEastTo(forth);
+		forth.connectWestTo(second);
+		forth.connectSouthTo(sixth);
+		sixth.connectNorthTo(forth);
+		forth.connectEastTo(fifth);
+		fifth.connectWestTo(forth);
+		fifth.connectSouthTo(seventh);
+		seventh.connectNorthTo(fifth);
+		seventh.connectSouthTo(eighth);
+		eighth.connectNorthTo(seventh);
+		
 	}
 
 }

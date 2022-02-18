@@ -21,6 +21,7 @@ public class LevelGUI implements Observer {
 	private Level lv;
 	private Display d;
 	private Display lvl;
+	Color MyColor = new Color(255,255,230);
 	
 	
 	
@@ -48,7 +49,7 @@ public class LevelGUI implements Observer {
 	
 	
 	public void update(Observable arg0, Object arg1) {
-		
+		d.repaint();
 	}
 	
 	
@@ -61,7 +62,7 @@ public class LevelGUI implements Observer {
 			
 			addKeyListener(new Listener());
 			
-			setBackground(Color.white);
+			setBackground(MyColor);
 			setPreferredSize(new Dimension(x+20,y+20));
 			setFocusable(true);
 		}
@@ -81,18 +82,48 @@ public class LevelGUI implements Observer {
 		
 		private void Corridors(Graphics g) {
 			for(Room room : lv.rooms) {
+				g.setColor(Color.black);
 				if(room.northdoor != null) {
-					
+					int roomx = room.x + room.dx/2;
+					int roomy = room.y - 20;
+					g.fillRect(roomx, roomy, 20, 20);
 				}
-				
+				if(room.southdoor != null) {
+					int roomx = room.x + room.dx/2;
+					int roomy = room.y + room.dy ;
+					g.fillRect(roomx, roomy, 20, 20);
+				}
+				if(room.eastdoor != null) {
+					int roomx = room.x + room.dx;
+					int roomy = room.y + room.dy/2;
+					g.fillRect(roomx, roomy, 20, 20);
+				}
+				if(room.westdoor != null) {
+					int roomx = room.x - 20;
+					int roomy = room.y + room.dy/2;
+					g.fillRect(roomx, roomy, 20, 20);
+				}
 				
 			}
 		}
 		
+		public void firstroom(Graphics g) {
+			g.setColor(Color.PINK);
+			int xcord = Level.rooms.get(0).x;
+			int ycord = Level.rooms.get(0).y;
+			g.fillRect(xcord-2, ycord-2 ,85, 205 );
+		}
+		
+		public void currentlocation(Graphics g) {
+			for(Room room: lv.rooms);
+		}
+		
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
+			firstroom(g);
 			sizeLoc(g);
 			Corridors(g);
+			
 		}
 		
 		
@@ -100,12 +131,14 @@ public class LevelGUI implements Observer {
 
 	 		
 	 		public void keyPressed(KeyEvent arg0) {
-	 		
+
 	 			
 	 		}
 
 	 		public void keyReleased(KeyEvent arg0) {
+	 			
 	 		}
+
 
 	 		public void keyTyped(KeyEvent event) {
 	 			switch(event.getKeyChar()) {
@@ -122,6 +155,7 @@ public class LevelGUI implements Observer {
 	 				System.out.println("You pressed the 'd' key");
 	 				break; 			
 	 			}
+
 	 			
 	 		}
 	 	}

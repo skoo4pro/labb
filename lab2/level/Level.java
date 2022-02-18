@@ -1,4 +1,5 @@
 
+
 package lab2.level;
 
 
@@ -42,6 +43,4 @@ public class Level extends Observable {
 	}
 	
 }
-//location=location.doorE
-//setChanged()
-//notifyobservers()
+

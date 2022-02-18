@@ -1,4 +1,5 @@
 
+
 package lab2.level;
 
 import java.awt.Color;
@@ -37,3 +38,4 @@ public class Room {
 		this.westdoor = r;
 	}
 }
+
