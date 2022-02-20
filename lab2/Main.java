@@ -1,4 +1,4 @@
-
+s
 package lab2;
 
 import java.awt.Color;
