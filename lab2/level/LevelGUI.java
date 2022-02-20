@@ -1,4 +1,8 @@
 
+//om det finns en dörr, go w/n/..
+//if lv.location.doorE != null
+//lv.goNorth
+
 package lab2.level;
 import lab2.Driver;
 import lab2.level.Room;
@@ -147,9 +151,6 @@ public class LevelGUI implements Observer {
 	 		public void keyTyped(KeyEvent event) {
 	 			switch(event.getKeyChar()) {
 	 			case 'w':
-	 				if (lv.location.doorE != null) {
-	 					lv.goEast
-	 				}
 	 				System.out.println("You pressed the 'w' key");
 	 				break;
 	 			case 'a':
