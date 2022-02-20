@@ -21,7 +21,11 @@ public class LevelGUI implements Observer {
 	private Level lv;
 	private Display d;
 	private Display lvl;
+<<<<<<< HEAD
 	Color MyColor = new Color(255,255,230);
+=======
+	Color MyColor = new Color(120,30,240);
+>>>>>>> branch 'master' of https://github.com/skoo4pro/labb.git
 	
 	
 	
@@ -112,6 +116,21 @@ public class LevelGUI implements Observer {
 			int xcord = Level.rooms.get(0).x;
 			int ycord = Level.rooms.get(0).y;
 			g.fillRect(xcord-2, ycord-2 ,85, 205 );
+<<<<<<< HEAD
+=======
+		}
+		
+		public void currentlocation(Graphics g) {
+			for(Room room: lv.rooms);
+		}
+		
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			firstroom(g);
+			sizeLoc(g);
+			Corridors(g);
+			
+>>>>>>> branch 'master' of https://github.com/skoo4pro/labb.git
 		}
 		
 		public void currentlocation(Graphics g) {
@@ -131,7 +150,10 @@ public class LevelGUI implements Observer {
 
 	 		
 	 		public void keyPressed(KeyEvent arg0) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/skoo4pro/labb.git
 	 			
 	 		}
 
@@ -139,6 +161,7 @@ public class LevelGUI implements Observer {
 	 			
 	 		}
 
+<<<<<<< HEAD
 
 	 		public void keyTyped(KeyEvent event) {
 	 			switch(event.getKeyChar()) {
@@ -156,6 +179,9 @@ public class LevelGUI implements Observer {
 	 				break; 			
 	 			}
 
+=======
+	 		public void keyTyped(KeyEvent w) {
+>>>>>>> branch 'master' of https://github.com/skoo4pro/labb.git
 	 			
 	 		}
 	 	}
