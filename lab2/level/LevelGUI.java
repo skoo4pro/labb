@@ -158,6 +158,9 @@ public class LevelGUI implements Observer {
 	 			case 'd':
 	 				System.out.println("You pressed the 'd' key");
 	 				break; 			
+	 			default:
+	 				System.out.println("This key does not help you");
+	 				break;
 	 			}
 
 
