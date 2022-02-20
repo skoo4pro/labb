@@ -16,7 +16,7 @@ public class Room {
 	int dy;
 	int x;
 	int y;
-	
+	s
 	public Room(int dx, int dy, Color color) {
 		this.dx = dx;
 		this.dy = dy;
