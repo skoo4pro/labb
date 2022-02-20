@@ -1,4 +1,4 @@
-e
+
 package lab2.level;
 import lab2.Driver;
 import lab2.level.Room;

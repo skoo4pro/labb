@@ -1,5 +1,5 @@
 package lab2;
-s
+
 import java.awt.Color;
 
 import lab2.level.Level;

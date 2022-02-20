@@ -1,5 +1,5 @@
 
-s
+
 package lab2.level;
 
 
