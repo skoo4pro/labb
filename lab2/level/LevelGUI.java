@@ -147,6 +147,9 @@ public class LevelGUI implements Observer {
 	 		public void keyTyped(KeyEvent event) {
 	 			switch(event.getKeyChar()) {
 	 			case 'w':
+	 				if (lv.location.doorE != null) {
+	 					lv.goEast
+	 				}
 	 				System.out.println("You pressed the 'w' key");
 	 				break;
 	 			case 'a':

@@ -14,7 +14,6 @@ public class Driver {
 		System.out.println("This is a print-out from the driver");
 		
 		
-<<<<<<< HEAD
 
 		Room first = new Room(80,200,new Color(30,160,200));
 		Room second = new Room(180,180,new Color(50,250,100));
@@ -26,19 +25,7 @@ public class Driver {
 		Room eighth = new Room(180,80, new Color(200,1,140));
 	
 
-		
 
-=======
-		Room first = new Room(80,200,Color.red);
-		Room second = new Room(180,180,Color.ORANGE);
-		Room third = new Room(200,80,Color.blue);
-		Room forth = new Room(80,100,Color.GREEN);
-		Room fifth = new Room(60,80,Color.PINK);
-		Room sixth = new Room(120,80,Color.YELLOW);
-		Room seventh = new Room(140,160,Color.MAGENTA);
-		Room eighth = new Room(180,80,Color.CYAN);
-		
->>>>>>> branch 'master' of https://github.com/skoo4pro/labb.git
 		Level.place(first, 60, 180);
 		Level.place(second, 200, 100);
 		Level.place(third, 200, 340);
